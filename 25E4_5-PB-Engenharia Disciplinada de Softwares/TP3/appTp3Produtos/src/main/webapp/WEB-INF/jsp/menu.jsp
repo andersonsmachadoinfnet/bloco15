@@ -9,7 +9,7 @@
     
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
-	  <li><a href="/produto/lista">Produtos</a></li>
+	  <li><a href="/produto/lista" id="linkProduto">Produtos</a></li>
     </ul>
   </div>
 </nav>

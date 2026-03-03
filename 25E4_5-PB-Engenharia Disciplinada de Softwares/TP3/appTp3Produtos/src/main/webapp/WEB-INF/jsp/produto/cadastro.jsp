@@ -16,22 +16,22 @@
 		<h3>Cadastro de Produtos</h3>
 
 			<c:if test="${not empty produto}">
-				<input type="hidden" name="id" value="${produto.id}" class="form-control">
+				<input type="hidden" id="input-id" value="${produto.id}" class="form-control">
 			</c:if>
 
-			<label>EAN: <c:if test="${not empty produto}">ID=${produto.id};</c:if></label>
-			<input type="text" name="ean" <c:if test="${not empty produto}">value="${produto.ean}"</c:if> class="form-control">
+			<label>EAN:</label>
+			<input type="text" name="ean" id="input-ean" <c:if test="${not empty produto}">value="${produto.ean}"</c:if> class="form-control">
 
 			<label>Nome:</label>
-			<input type="text" name="nome" <c:if test="${not empty produto}">value="${produto.nome}"</c:if> class="form-control">
+			<input type="text" name="nome" id="input-nome" <c:if test="${not empty produto}">value="${produto.nome}"</c:if> class="form-control">
 
 			<label>Preço:</label>
-			<input type="text" name="preco" <c:if test="${not empty produto}">value="${produto.preco}"</c:if> class="form-control">
+			<input type="text" name="preco" id="input-preco" <c:if test="${not empty produto}">value="${produto.preco}"</c:if> class="form-control">
 
 			<label>ImageLink:</label>
-			<input type="text" name="imglink" <c:if test="${not empty produto}">value="${produto.imglink}"</c:if> class="form-control">
+			<input type="text" name="imglink" id="input-imglink" <c:if test="${not empty produto}">value="${produto.imglink}"</c:if> class="form-control">
 
-		<button type="submit">Cadastrar</button>
+		<button type="submit" id="btn-cadastrar">Cadastrar</button>
 	</form>
 </div>
 </body>

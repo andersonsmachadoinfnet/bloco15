@@ -1,6 +1,11 @@
 package br.anderson.infnet.appTp3Produtos.model.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Produto")
@@ -12,11 +17,22 @@ public class Produto {
     private String ean;
     @Column(name = "nome", length = 128, nullable = true)
     private String nome;
-    private float preco;
+    private Float preco;
     @Column(name = "imglink", length = 255, nullable = false)
     private String imglink;
 
-    public Integer getId() {
+    public Produto(Integer id, String ean, String nome, float preco, String imglink) {
+			this.id = id;
+			this.ean = ean;
+			this.nome = nome;
+			this.preco = preco;
+			this.imglink = imglink;
+		}
+
+		public Produto() {
+		}
+
+		public Integer getId() {
         return id;
     }
 
@@ -40,11 +56,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public float getPreco() {
+    public Float getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(Float preco) {
         this.preco = preco;
     }
 

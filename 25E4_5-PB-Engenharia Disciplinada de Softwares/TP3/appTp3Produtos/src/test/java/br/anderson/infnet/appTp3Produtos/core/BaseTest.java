@@ -1,5 +1,6 @@
 package br.anderson.infnet.appTp3Produtos.core;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
@@ -13,6 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public abstract class BaseTest {
 	protected WebDriver driver;
+	protected static final Duration DURATION = Duration.ofSeconds(30);
 
 	@BeforeAll
 	public static void configurarDrive() {

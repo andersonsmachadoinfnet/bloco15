@@ -21,7 +21,7 @@
 		</c:if>
 
 		<form action="/produto" method="get">
-			<button type="submit">Novo</button>
+			<button type="submit" id="link-novo">Novo</button>
 		</form>
 
 		<c:if test="${empty produtos}">
@@ -29,7 +29,7 @@
 		</c:if>
 	
 		<c:if test="${not empty produtos}">
-			<h5>Quantidade de produtos cadastrados: ${produtos.size()}!!!</h5>
+			<h5>Quantidade de produtos cadastrados: ${produtos.size()}</h5>
 	
 			<table class="table table-striped">
 			  <thead>
@@ -51,8 +51,8 @@
 				      <td>${p.ean}</td>
 				      <td>${p.nome}</td>
 				      <td>${p.preco}</td>
-					  <td><a href="/produto/${p.id}/editar">Editar</a></td>
-				      <td><a href="/produto/${p.id}/excluir">excluir</a></td>
+					  <td><a href="/produto/${p.id}/editar" class="link-editar">Editar</a></td>
+				      <td><a href="/produto/${p.id}/excluir" class="link-excluir">excluir</a></td>
 				    </tr>
 			    </c:forEach>
 			  </tbody>

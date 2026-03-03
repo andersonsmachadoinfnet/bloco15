@@ -79,6 +79,11 @@ public abstract class BasePage<P extends BasePage<P>> {
 		throw new RuntimeException("Elemento não encontrado na página após rolagem.");
 	}
 
+	public boolean isOnPage() {
+		String lUrl = driver.getCurrentUrl();
+		return url.equals(driver.getCurrentUrl());
+	}
+
 	protected void sleep(long ms) {
 		try {
 			Thread.sleep(ms);
