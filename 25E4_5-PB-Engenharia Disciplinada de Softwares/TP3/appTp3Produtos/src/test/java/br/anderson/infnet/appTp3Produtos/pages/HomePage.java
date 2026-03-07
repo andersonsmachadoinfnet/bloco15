@@ -15,29 +15,8 @@ public class HomePage extends BasePage<HomePage> {
         super(driver, duration, URL);
     }
 
-    public ProdutosPage navegarParaListaDeProdutos() {
-        click(linkProduto);
-        return new ProdutosPage(driver, duration);
-    }
-
-
-
-    /*public HomePage alterarParaIframe() {
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iframe));
-        return this;
-    }*/
-
-//    @Test
-//    @DisplayName("Testa Produto, campos;")
-//    public void testa()  {
-//        driver.get(URL);
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
-//        //Assertions.assertEquals(1,1);
+//    public ProdutosPage navegarParaListaDeProdutos() {
+//        click(linkProduto);
+//        return new ProdutosPage(driver, duration);
 //    }
-
-
 }

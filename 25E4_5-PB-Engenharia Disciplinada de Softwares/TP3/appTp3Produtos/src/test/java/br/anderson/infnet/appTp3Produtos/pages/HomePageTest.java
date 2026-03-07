@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.Duration;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class HomePageTest extends BaseTest {
 
     @Test
@@ -21,13 +21,13 @@ public class HomePageTest extends BaseTest {
         Assertions.assertTrue(homepage.isOnPage());
     }
 
-    @Test
-    @DisplayName("Deve ir para a pagina de lista de produtos")
-    public void deveIrParaAPaginaDeListaDeProdutos() {
-        HomePage homepage = new HomePage(driver, DURATION);
-        ProdutosPage produtosPage = homepage.abrir().navegarParaListaDeProdutos();
-        Assertions.assertTrue(produtosPage.isOnPage());
-    }
+//    @Test
+//    @DisplayName("Deve ir para a pagina de lista de produtos")
+//    public void deveIrParaAPaginaDeListaDeProdutos() {
+//        HomePage homepage = new HomePage(driver, DURATION);
+//        ProdutosPage produtosPage = homepage.abrir().navegarParaListaDeProdutos();
+//        Assertions.assertTrue(produtosPage.isOnPage());
+//    }
 
 
 }

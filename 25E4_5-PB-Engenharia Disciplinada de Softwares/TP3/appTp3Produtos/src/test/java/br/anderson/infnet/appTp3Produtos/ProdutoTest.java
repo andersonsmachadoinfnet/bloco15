@@ -28,4 +28,15 @@ public class ProdutoTest {
         Assertions.assertEquals(produtoDest.getImglink(), produtoOrig.getImglink());
         Assertions.assertEquals(produtoDest.getEan(), produtoOrig.getEan());
     }
+
+    @Test
+    @DisplayName("Testa o construtor da classe Produto")
+    public void testeProdutoConstrutor() {
+        Produto produtoBase = ProdutoBuilder.aProduto().build();
+        Produto produto = new Produto(1, produtoBase.getEan(), produtoBase.getNome(), produtoBase.getPreco(), produtoBase.getImglink());
+        Assertions.assertEquals(produto.getNome(), produtoBase.getNome());
+        Assertions.assertEquals(produto.getPreco(), produtoBase.getPreco());
+        Assertions.assertEquals(produto.getImglink(), produtoBase.getImglink());
+        Assertions.assertEquals(produto.getEan(), produtoBase.getEan());
+    }
 }
