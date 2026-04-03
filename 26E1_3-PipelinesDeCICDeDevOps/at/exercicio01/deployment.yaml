@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ufodb
+  namespace: ufology
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ufodb
+  template:
+    metadata:
+      labels:
+        app: ufodb
+    spec:
+      containers:
+      - name: postgres
+        image: leogloriainfnet/ufodb:1.0-win
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "devops2025!"
+        - name: POSTGRES_DB
+          value: "ufology"
