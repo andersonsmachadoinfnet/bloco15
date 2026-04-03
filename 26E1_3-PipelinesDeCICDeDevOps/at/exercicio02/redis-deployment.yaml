@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ufology-redis
+  namespace: ufology
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ufology-redis
+  template:
+    metadata:
+      labels:
+        app: ufology-redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7.2-alpine
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6379
